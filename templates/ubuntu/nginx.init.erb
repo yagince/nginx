@@ -52,8 +52,7 @@ case "$1" in
 
 	stop)
 		echo -n "Stopping $DESC: "
-		start-stop-daemon --stop --quiet --pidfile $PID \
-		    --exec $DAEMON || true
+		start-stop-daemon --stop --quiet --pidfile $PID || true
 		echo "$NAME."
 		;;
 
